@@ -7,6 +7,6 @@ import one.digitalinovation.gof.model.Endereco;
 
 @FeignClient(name = "viacep", url = "https://viacep.com.br/ws")
 public interface ViaCepService {
-	@GetMapping(value = "/{cep}/json/")
+	@GetMapping("/{cep}/json/")
 	Endereco consultarCep(@PathVariable("cep") String cep);
 }
